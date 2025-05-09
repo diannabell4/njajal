@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Saya</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header baru sesuai permintaan */
+    .header {
+      background-color: #004080;
+      color: #fff;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    main.content {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .profile-pic {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .about-box {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 700px;
+      flex: 1;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .intro-text {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #004080;
+      text-align: center;
+      padding: 2rem;
+      color: white;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: #004080;
+    }
+
+    .experience-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .experience-card {
+      background: white;
+      padding: 1.5rem;
+      border-left: 5px solid #004080;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .experience-card h3 {
+      color: #004080;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .skill-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      width: 300px;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-card h3 {
+      margin-top: 1rem;
+      color: #004080;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .skill-card ul {
+      text-align: left;
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .skill-section {
+      padding-top: 100px;
+    }
+
+    .skill-box {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 64, 128, 0.1);
+      padding: 2rem;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-top: 5px solid #004080;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 64, 128, 0.2);
+    }
+
+    .skill-box h3 {
+      margin-top: 1rem;
+      color: #004080;
+    }
+
+    .skill-box ul {
+      text-align: left;
+      margin-top: 1rem;
+      padding-left: 20px;
+    }
+
+    .skill-icon {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .skills-list,
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .certificates-container {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .certificates-container img {
+      max-width: 200px;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .nav a {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header yang disamakan -->
+  <header class="header">
+    <div class="container-header">
+      <div class="logo">Profil Saya</div>
+      <nav class="nav">
+        <a href="index.html">Tentang</a>
+        <a href="pengalaman.html">Pengalaman</a>
+        <a href="kemampuan.html">Kemampuan</a>
+        <a href="sertifikat.html">Sertifikat</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Konten utama -->
+  <main class="content">
+    <section id="about" class="section">
+      <div class="about-container">
+        <img src="fotosaya.jpeg" alt="Foto Profil" class="profile-pic" />
+        <div class="about-box">
+          <p class="intro-text">Halo! Saya Dian Nabel Agustin</p>
+          <p>
+            Saya adalah siswa SMK Negeri 1 Nglegok jurusan Teknik Komputer dan Jaringan (TKJ).
+            Selama menjalani pendidikan di SMK, saya aktif dalam kegiatan organisasi,
+            khususnya sebagai anggota OSIS. Keaktifan saya dalam organisasi membentuk karakter kepemimpinan,
+            tanggung jawab, dan kemampuan komunikasi yang baik. Di bidang akademik, saya memiliki minat
+            tinggi dalam teknologi jaringan komputer serta keterampilan praktis dalam perakitan,
+            pemeliharaan, dan pengelolaan sistem jaringan.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Portofolio Dian Nabel Agustin</p>
+  </footer>
+</body>
+</html>

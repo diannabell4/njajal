@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengalaman - Profil Saya</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    /* Header */
+    .header {
+      background-color: #004080;
+      color: #fff;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Content */
+    .content {
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: #004080;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .skill-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      width: 300px;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-card h3 {
+      margin-top: 1rem;
+      color: #004080;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .skill-card ul {
+      text-align: left;
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .skill-icon {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004080;
+      text-align: center;
+      padding: 2rem;
+      color: white;
+    }
+
+    /* Responsivitas */
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .nav a {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      .skills-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .skill-card {
+        width: 80%;
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container-header">
+      <div class="logo">Profil Saya</div>
+      <nav class="nav">
+        <a href="index.html">Tentang</a>
+        <a href="pengalaman.html">Pengalaman</a>
+        <a href="kemampuan.html">Kemampuan</a>
+        <a href="sertifikat.html">Sertifikat</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Kemampuan -->
+  <main class="content">
+    <section id="skills" class="section">
+      <h2 class="section-title">Kemampuan</h2>
+      <div class="skills-container">
+        
+        <!-- Mikrotik -->
+        <div class="skill-card">
+          <img src="mikrotik.png" alt="Mikrotik Logo" class="skill-icon" />
+          <h3>Mikrotik</h3>
+          <ul>
+            <li>Static Routing, Wireless, QoS, Tunnel, OSPF, Simple Queue</li>
+            <li>VLAN pada switch Cisco untuk mengelompokkan jaringan secara logis</li>
+            <li>Trunking (802.1Q) antar VLAN switch</li>
+            <li>Pembatasan VLAN tertentu melalui trunk</li>
+          </ul>
+        </div>
+
+        <!-- Sysadmin -->
+        <div class="skill-card">
+          <img src="linux.png" alt="Sysadmin Logo" class="skill-icon" />
+          <h3>Sysadmin</h3>
+          <ul>
+            <li>Linux Fundamental</li>
+            <li>Manajemen User dan File</li>
+            <li>Manajemen Network dan Access</li>
+            <li>DNS Server</li>
+            <li>Web & Database Server</li>
+            <li>Instalasi Wordpress dan mengedit website</li>
+          </ul>
+        </div>
+
+        <!-- Pemrograman -->
+        <div class="skill-card">
+          <img src="pweb.png" alt="Pemrograman Logo" class="skill-icon" />
+          <h3>Pemrograman</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Portofolio Dian Nabel Agustin</p>
+  </footer>
+</body>
+</html>

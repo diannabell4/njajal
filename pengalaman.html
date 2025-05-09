@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengalaman - Profil Saya</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    /* Header */
+    .header {
+      background-color: #004080;
+      color: #fff;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Content */
+    .content {
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: #004080;
+    }
+
+    .experience-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .experience-card {
+      background: white;
+      padding: 1.5rem;
+      border-left: 5px solid #004080;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .experience-card h3 {
+      color: #004080;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-card ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004080;
+      text-align: center;
+      padding: 2rem;
+      color: white;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .nav a {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    /* Flex Layout for Full Height */
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main.content {
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container-header">
+      <div class="logo">Profil Saya</div>
+      <nav class="nav">
+        <a href="index.html">Tentang</a>
+        <a href="pengalaman.html">Pengalaman</a>
+        <a href="kemampuan.html">Kemampuan</a>
+        <a href="sertifikat.html">Sertifikat</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Konten Pengalaman -->
+  <main class="content">
+    <h2 class="section-title">Pengalaman</h2>
+    <div class="experience-container">
+      <div class="experience-card">
+        <h3>OSIS SMKN 1 NGLEGOK</h3>
+        <p><strong>Ceo Sekbid Publikasi dan Dokumentasi</strong></p>
+        <ul>
+          <li>Mendokumentasikan kegiatan di sekolah</li>
+          <li>Membuat pamflet dan konten untuk media sosial</li>
+          <li>Menjadi panitia Diesnatalis-16</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Membuat Website dengan Linux Debian</h3>
+        <ul>
+          <li>Membuat website menggunakan Wordpress</li>
+          <li>Berbasis Linux Debian dan dikerjakan dalam kelompok</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Membuat Website dengan HTML & CSS</h3>
+        <ul>
+          <li>Proyek kelompok membuat website dari awal</li>
+          <li>Menggunakan HTML & CSS</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Portofolio Dian Nabel Agustin</p>
+  </footer>
+</body>
+</html>
